@@ -1,4 +1,4 @@
-# voting dapp with Solidity, Hardhat
+# strategy dapp with Solidity, Hardhat
 
 ```shell
 npx hardhat accounts
