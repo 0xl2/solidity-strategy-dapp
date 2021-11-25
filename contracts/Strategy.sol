@@ -57,6 +57,8 @@ contract Strategy {
     function joinStrategy(uint256 _strategyIndex) public {
         require(!strategyJoiners[_strategyIndex][msg.sender], "Joined already");
 
+        // transfer needed here
+
         strategyJoiners[_strategyIndex][msg.sender] = true;
 
         emit JoinStrategy(msg.sender, _strategyIndex, block.timestamp);
@@ -64,6 +66,8 @@ contract Strategy {
 
     function exitStrategy(uint256 _strategyIndex) public {
         require(strategyJoiners[_strategyIndex][msg.sender], "You did not join before");
+
+        // transfer needed here
 
         strategyJoiners[_strategyIndex][msg.sender] = false;
 
